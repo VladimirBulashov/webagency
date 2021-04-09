@@ -26,10 +26,17 @@ p {
 
 section {
     display: flex;
+    flex-direction: column;
     height: 100vh;
     align-items: center; /*блок текста по центру*/
     padding: 100px; 
+    margin-top: 60px;
 
+}
+
+section.home {
+    flex-direction: row;
+    margin-top: 0;
 }
 
 .btn {
@@ -150,6 +157,28 @@ section {
     bottom: 0;
     right: 0;
     height: 110%; /*картинка справа меняет размер в зависимости от экрана*/
+}
+
+/*Services page*/
+
+.services {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /*позволит поставить в колонки, можно 50% на 50%, можно 70 на 30*/
+    gap: 40px; /*расстояние вокруг блоков*/
+    text-align: center;
+}
+
+.services .service .icon img {
+    max-width: 100px;
+}
+
+.services .service {
+    padding: 30px;
+}
+
+.services .service:hover{
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);/*тень на блоках*/
 }
 
 @media(max-width:1068px) {
